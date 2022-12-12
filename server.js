@@ -41,6 +41,3 @@ app.post('/imageurl', (req,res) =>image.handleClarifai(req,res, ClarifaiStub, gr
 app.listen(process.env.PORT || 3000, () =>{
     console.log(`App is running on port ${process.env.PORT}` || `3000`);
 });
-
-
-console.log(process.env);
