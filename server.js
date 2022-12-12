@@ -38,8 +38,8 @@ app.put('/image', (req,res) => image.handleImage(req,res,postgres));
 
 app.post('/imageurl', (req,res) =>image.handleClarifai(req,res, ClarifaiStub, grpc));
 
-app.listen(3000, () =>{
-    console.log('App is running on port 3000')
+app.listen(process.env.PORT || 3000, () =>{
+    console.log(`App is running on port ${process.env.PORT}` || `3000`);
 });
 
 
